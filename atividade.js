@@ -113,6 +113,14 @@ console.log("_______________________________");
 //    meço <altura>m e estou estudando JavaScript: <estudandoJS>."
 
 // → Seu código aqui:
+let nome = "André"
+let idade = 20
+let altura = 1.78
+let minhaCidade = "jaragua do sul"
+let estudandoJS =  true
+
+let fraseAtividade = `Olá! meu nome é ${nome}, tenho ${idade} anos, moro em ${minhaCidade}, meço ${altura} e estou estudando JavaScript: ${estudandoJS}.`
+ console.log (fraseAtividade)
 
 
 console.log("_______________________________");
