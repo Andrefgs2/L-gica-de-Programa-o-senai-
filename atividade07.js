@@ -273,4 +273,47 @@ console.log("_______________________________");
 // g) Chame o professor para realizar alguns testes 🫡
 
 // → Seu código aqui:
+const readline = require('readline-sync');
+let numeroA = readline.questionFloat("Digite o primeiro número: ");
+let numeroB = readline.questionFloat("Digite o segundo número: ");
 
+console.log("Escolha a operação:");
+console.log("1 – Soma");
+console.log("2 – Subtração");
+console.log("3 – Multiplicação");
+console.log("4 – Divisão");
+
+let operacao = readline.questionInt("Digite o número da operação: ");
+
+let simbolo;
+let resultado;
+
+let calculo = {
+  numeroA: numeroA,
+  numeroB: numeroB,
+  operacao: operacao,
+  simbolo: simbolo
+};
+
+if (operacao === 1) {
+  calculo.simbolo = "+";
+  resultado = numeroA + numeroB;
+} else if (operacao === 2) {
+  calculo.simbolo = "-";
+  resultado = numeroA - numeroB;
+} else if (operacao === 3) {
+  calculo.simbolo = "*";
+  resultado = numeroA * numeroB;
+} else if (operacao === 4) {
+  calculo.simbolo = "/";
+  
+  if (numeroB === 0) {
+    console.log("Erro: divisão por zero não é permitida.");
+    return;
+  }
+  resultado = numeroA / numeroB;
+} else {
+  console.log("Operação inválida.");
+  return;
+}
+console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`);
